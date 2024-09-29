@@ -13,7 +13,6 @@ Savorium is a luxury restaurant website template designed to offer a sophisticat
 - **Optimized Performance:** Fast load times and smooth navigation powered by Vite’s quick build process.
 - **Service Listings:** Clearly defined restaruant services such as Breakfast, Lunch, Dinner etc.
 - **Client Testimonials & FAQs:** Display sections for client reviews and answers to common questions, enhancing credibility and user trust.
-- **Online Booking System:** Convenient appointment scheduling with just a single click, making it easy for users to book notary services.
 
 ## Usage Instructions
 
