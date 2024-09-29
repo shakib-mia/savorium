@@ -1,0 +1,1658 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savorium</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="w-screen overflow-x-hidden">
+      <!-- Navbar -->
+      <div class="fixed left-0 top-0 z-[99999999999] lg:top-8" id="navbar">
+        <nav class="relative w-screen bg-black lg:bg-transparent">
+          <div
+            class="container flex items-center justify-between bg-black px-4 py-3 text-white shadow-xl xl:px-10 xl:py-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <!-- Logo -->
+            <a href="#" class="inline-block w-1/2 lg:w-1/3 xl:w-1/5">
+              <img src="./assets/images/logo.svg" alt="logo" />
+            </a>
+
+            <!-- Hamburger Icon (Visible on Mobile) -->
+            <div class="flex items-center xl:hidden">
+              <span
+                id="menu-toggle"
+                class="text-4xl text-primary focus:outline-none md:text-6xl"
+              >
+                <i class="fas fa-bars"></i>
+              </span>
+            </div>
+
+            <!-- pc view -->
+            <!-- Navbar Links -->
+            <ul
+              id="menu"
+              class="fixed left-0 top-[99%] z-[99999] hidden max-h-0 w-screen divide-y divide-primary overflow-hidden bg-black text-lg capitalize text-white shadow-[0_16px_20px_0_#2B245D21] transition-all duration-500 ease-linear lg:left-[-9%] xl:static xl:mt-0 xl:flex xl:max-h-full xl:w-auto xl:gap-8 xl:divide-y-0 xl:bg-transparent xl:py-0 xl:shadow-none"
+            >
+              <!-- Navbar Item -->
+              <li
+                class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+              >
+                <a
+                  href="#"
+                  class="container block py-4 transition xl:p-4 xl:px-0"
+                  >Home</a
+                >
+
+                <!-- underline -->
+                <div
+                  class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+                ></div>
+              </li>
+              <!-- Navbar Item -->
+              <li
+                class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+              >
+                <a
+                  href="#about"
+                  class="container block py-4 transition xl:p-4 xl:px-0"
+                  >About</a
+                >
+
+                <!-- underline -->
+                <div
+                  class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+                ></div>
+              </li>
+              <!-- Navbar Item -->
+              <li
+                class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+              >
+                <a
+                  href="#dishes"
+                  class="container block py-4 transition xl:p-4 xl:px-0"
+                  >dishes</a
+                >
+
+                <!-- underline -->
+                <div
+                  class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+                ></div>
+              </li>
+              <!-- Navbar Item -->
+              <li
+                class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+              >
+                <a
+                  href="#reservation"
+                  class="container block py-4 transition xl:p-4 xl:px-0"
+                  >reservation</a
+                >
+
+                <!-- underline -->
+                <div
+                  class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+                ></div>
+              </li>
+
+              <!-- Navbar Item -->
+              <li
+                class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+              >
+                <a
+                  href="#contact"
+                  class="container block py-4 transition xl:p-4 xl:px-0"
+                  >Contact</a
+                >
+
+                <!-- underline -->
+                <div
+                  class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+                ></div>
+              </li>
+            </ul>
+
+            <!-- Register Button -->
+            <button class="primary hidden xl:inline-block">Book a Table</button>
+          </div>
+
+          <!-- Phone view -->
+          <!-- Navbar Links -->
+          <ul
+            id="menu-items"
+            class="fixed left-0 z-[99999] max-h-0 w-screen divide-primary overflow-hidden bg-black text-lg capitalize text-white shadow-[0_16px_20px_0_#2B245D21] transition-all duration-500 ease-linear xl:static xl:left-[-9%] xl:mt-0 xl:hidden xl:max-h-full xl:w-auto xl:gap-8 xl:divide-y-0 xl:bg-transparent xl:py-0 xl:shadow-none"
+          >
+            <!-- Navbar Item -->
+            <li
+              class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+            >
+              <a href="#" class="container block py-4 transition xl:p-4 xl:px-0"
+                >Home</a
+              >
+
+              <!-- underline -->
+              <div
+                class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+              ></div>
+            </li>
+            <!-- Navbar Item -->
+            <li
+              class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+            >
+              <a
+                href="#about"
+                class="container block py-4 transition xl:p-4 xl:px-0"
+                >About</a
+              >
+
+              <!-- underline -->
+              <div
+                class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+              ></div>
+            </li>
+            <!-- Navbar Item -->
+            <li
+              class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+            >
+              <a
+                href="#dishes"
+                class="container block py-4 transition xl:p-4 xl:px-0"
+                >dishes</a
+              >
+
+              <!-- underline -->
+              <div
+                class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+              ></div>
+            </li>
+            <!-- Navbar Item -->
+            <li
+              class="group relative transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+            >
+              <a
+                href="#reservation"
+                class="container block py-4 transition xl:p-4 xl:px-0"
+                >reservation</a
+              >
+
+              <!-- underline -->
+              <div
+                class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+              ></div>
+            </li>
+
+            <!-- Navbar Item -->
+            <li
+              class="group relative pb-4 transition hover:bg-primary hover:text-white xl:hover:bg-transparent xl:hover:text-primary"
+            >
+              <a
+                href="#contact"
+                class="container block py-4 transition xl:p-4 xl:px-0"
+                >Contact</a
+              >
+
+              <!-- underline -->
+              <div
+                class="absolute bottom-3 left-0 right-0 mx-auto h-[1.55px] w-0 bg-white transition-[width_background-color] duration-500 group-hover:bg-primary group-hover:xl:w-full"
+              ></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Hero Section -->
+      <header
+        class="relative flex flex-col items-center justify-center gap-8 rounded-b-[10px] bg-[center_bottom_-1rem] bg-no-repeat pb-20 pt-40 xl:pb-60 xl:pt-80"
+        style="background-image: url(./assets/images/hero-bg.jpg)"
+      >
+        <div class="container text-white">
+          <div class="mx-auto text-center xl:w-2/3">
+            <!-- Heading -->
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
+            >
+              Discover Exquisite Flavors at
+              <span class="text-primary">Savorium</span>
+            </h1>
+            <!-- Paragraph -->
+            <p
+              class="mx-auto mb-10 mt-4 capitalize lg:mb-10 lg:mt-0"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
+              Step into a world of culinary delight at Savorium, where every
+              dish is a masterpiece crafted with passion and precision. Indulge
+              your senses in a symphony of flavors curated by our talented
+              chefs, blending global inspirations with locally sourced
+              ingredients.
+            </p>
+
+            <!-- Buttons -->
+            <div
+              class="flex flex-col justify-center gap-4 lg:gap-6 xl:flex-row"
+            >
+              <!-- Left Button -->
+              <aside
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+              >
+                <button class="primary w-full">Book a Table</button>
+              </aside>
+              <!-- Right Button -->
+              <aside
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="350"
+              >
+                <button class="btn-outline w-full">Explore More</button>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Services Section -->
+      <section class="container py-14 xl:pb-14 xl:pt-32" id="about">
+        <!-- Services: 4 on pc view; 2 on tablets; 1 on phones -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <!-- Service 1 -->
+          <div
+            class="px-4 py-6 shadow-[0_0_30px_0_#76241B0D] hover:shadow-[0_0_16px_0_#76241B0D]"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+          >
+            <!-- Service Image -->
+            <img
+              src="./assets/images/services/Mask group.jpg"
+              alt="Exquisite Cuisine"
+              class="mx-auto"
+            />
+
+            <!-- Service Heading -->
+            <h4 class="my-2 text-center">Exquisite Cuisine</h4>
+            <!-- Service Text -->
+            <p class="text-center text-sm lg:text-base">
+              Indulge in a diverse menu featuring exquisite dishes crafted with
+              the finest ingredients and culinary expertise.
+            </p>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="px-4 py-6 shadow-[0_0_30px_0_#76241B0D] hover:shadow-[0_0_16px_0_#76241B0D]"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <!-- Service Image -->
+            <img
+              src="./assets/images/services/Mask group-1.jpg"
+              alt="Elegant Ambiance"
+              class="mx-auto"
+            />
+
+            <!-- Service Heading -->
+            <h4 class="my-2 text-center">Elegant Ambiance</h4>
+            <!-- Service Text -->
+            <p class="text-center text-sm lg:text-base">
+              Immerse in an elegant ambiance, perfect for romantic dinners or
+              celebratory meals, elevating your dining experience
+            </p>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="px-4 py-6 shadow-[0_0_30px_0_#76241B0D] hover:shadow-[0_0_16px_0_#76241B0D]"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <!-- Service Image -->
+            <img
+              src="./assets/images/services/Mask group-2.jpg"
+              alt="Exceptional Service"
+              class="mx-auto"
+            />
+
+            <!-- Service Heading -->
+            <h4 class="my-2 text-center">Exceptional Service</h4>
+            <!-- Service Text -->
+            <p class="text-center text-sm lg:text-base">
+              Enjoy attentive and professional service from our dedicated staff,
+              ensuring a seamless and memorable dining experience
+            </p>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="px-4 py-6 shadow-[0_0_30px_0_#76241B0D] hover:shadow-[0_0_16px_0_#76241B0D]"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <!-- Service Image -->
+            <img
+              src="./assets/images/services/Mask group-3.jpg"
+              alt="Seasonal Specialties"
+              class="mx-auto"
+            />
+
+            <!-- Service Heading -->
+            <h4 class="my-2 text-center">Seasonal Specialties</h4>
+            <!-- Service Text -->
+            <p class="text-center text-sm lg:text-base">
+              Explore our rotating seasonal menu, offering fresh and innovative
+              dishes inspired by the flavors of the season
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Luxury Restaurant Section -->
+      <section class="container py-7 lg:py-14">
+        <!-- Grid layout for the restaurant section -->
+        <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-2">
+          <!-- Left side: Welcome message and description -->
+          <aside>
+            <!-- Section heading -->
+            <h2 data-aos="fade-right" data-aos-duration="1000">
+              Welcome To Our <span class="text-primary">Luxury Restaurant</span>
+            </h2>
+            <!-- Section description -->
+            <p class="mb-6 mt-4" data-aos="fade-right" data-aos-duration="1000">
+              Welcome to Savorium, where luxury meets culinary excellence.
+              Indulge in an unforgettable dining experience where every dish is
+              crafted with passion and precision. Enjoy a sophisticated
+              ambiance, impeccable service, and a menu showcasing the finest
+              ingredients sourced from around the world. We invite you to savor
+              the essence of luxury dining at Savorium.
+            </p>
+            <!-- Button to learn more about the restaurant -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <button class="primary">More About Us</button>
+            </div>
+          </aside>
+
+          <!-- Right side: Image gallery showcasing the restaurant -->
+          <aside class="flex items-end gap-2 md:gap-4" id="butterfly">
+            <div class="flex flex-col gap-2 md:gap-4">
+              <!-- First image in the gallery -->
+              <div
+                class="overflow-hidden rounded-lg"
+                data-aos-anchor="#butterfly"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <img
+                  class="transition duration-700 hover:scale-125"
+                  src="./assets/images/greetings/Container-4.jpg"
+                  alt="Dining Experience"
+                />
+              </div>
+              <!-- Second image in the gallery -->
+              <div
+                class="ml-auto w-7/12 overflow-hidden rounded-lg"
+                data-aos-anchor="#butterfly"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                <img
+                  class="transition duration-700 hover:scale-125"
+                  src="./assets/images/greetings/Container-3.jpg"
+                  alt="Exquisite Cuisine"
+                />
+              </div>
+            </div>
+            <!-- Third image in the gallery -->
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor="#butterfly"
+              class="overflow-hidden rounded-lg"
+            >
+              <img
+                class="transition duration-700 hover:scale-125"
+                src="./assets/images/greetings/Container-2.jpg"
+                alt="Elegant Ambiance"
+              />
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4">
+              <!-- Fourth image in the gallery -->
+              <div
+                class="overflow-hidden rounded-lg"
+                data-aos-anchor="#butterfly"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <img
+                  class="transition duration-700 hover:scale-125"
+                  src="./assets/images/greetings/Container-1.jpg"
+                  alt="Luxurious Dining Area"
+                />
+              </div>
+              <!-- Fifth image in the gallery -->
+              <div
+                class="ml-0 w-10/12 overflow-hidden rounded-lg"
+                data-aos-anchor="#butterfly"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+              >
+                <img
+                  class="transition duration-700 hover:scale-125"
+                  src="./assets/images/greetings/Container.jpg"
+                  alt="Chef's Special"
+                />
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Items Section -->
+      <section id="dishes">
+        <!-- Background section with a scrolling effect -->
+        <div
+          class="flex items-center overflow-x-scroll bg-cover py-14 lg:py-28"
+          style="background-image: url(./assets/images/items-navigation-bg.jpg)"
+        >
+          <!-- Carousel for meal labels (Breakfast, Lunch, Dinner) -->
+          <div
+            class="owl-carousel mx-auto overflow-x-visible lg:w-1/3"
+            id="label-slider"
+          >
+            <!-- Breakfast label -->
+            <div class="flex items-center gap-2 text-white lg:gap-7">
+              <div class="h-[3px] w-full bg-white"></div>
+              <h2>Breakfast</h2>
+              <div class="h-[3px] w-full bg-white"></div>
+            </div>
+            <!-- Lunch label -->
+            <div class="flex items-center gap-2 text-white lg:gap-7">
+              <div class="h-[3px] w-full bg-white"></div>
+              <h2>Lunch</h2>
+              <div class="h-[3px] w-full bg-white"></div>
+            </div>
+            <!-- Dinner label -->
+            <div class="flex items-center gap-2 text-white lg:gap-7">
+              <div class="h-[3px] w-full bg-white"></div>
+              <h2>Dinner</h2>
+              <div class="h-[3px] w-full bg-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Container for item cards -->
+        <div class="container px-0">
+          <!-- Carousel for food items -->
+          <div class="owl-carousel" id="items-slider">
+            <!-- Grid for first set of items -->
+            <div
+              class="grid grid-cols-1 gap-2 px-4 pb-0 pt-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 lg:px-16 lg:pb-14"
+            >
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="relative mb-4 overflow-hidden rounded-lg">
+                  <div
+                    class="absolute left-2 top-2 rounded-sm bg-primary px-2 py-1 text-white"
+                  >
+                    Top Pick
+                  </div>
+                  <img
+                    src="./assets/images/items/Image Product-1.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">
+                    <!-- Text -->
+                    Grilled salmon with lemon with dill sauce
+                  </h3>
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$35.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-2.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Beef tenderloin steak</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$45.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-3.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Mushroom Risotto</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$30.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-6.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Thai Red Curry with Tofu</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$20.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-5.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Vegetarian Stuffed Bell Peppers</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$25.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-4.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Chicken breasts stuffed</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$40.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Grid for first set of items -->
+            <div
+              class="grid grid-cols-1 gap-2 px-4 pb-0 pt-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 lg:px-16"
+            >
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-4.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Chicken breasts stuffed</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$35.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-5.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Vegetarian Stuffed Bell Peppers</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$35.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-2.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Beef tenderloin steak</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$30.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="relative mb-4 overflow-hidden rounded-lg">
+                  <div
+                    class="absolute left-2 top-2 rounded-sm bg-primary px-2 py-1 text-white"
+                  >
+                    Top Pick
+                  </div>
+                  <img
+                    src="./assets/images/items/Image Product-1.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">
+                    <!-- Text -->
+                    Grilled salmon with lemon with dill sauce
+                  </h3>
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$45.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-3.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Mushroom Risotto</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$40.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-6.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Thai Red Curry with Tofu</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$25.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Grid for first set of items -->
+            <div
+              class="grid grid-cols-1 gap-2 px-4 pb-14 pt-16 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 lg:px-16"
+            >
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-2.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Beef tenderloin steak</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$20.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-6.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Thai Red Curry with Tofu</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$45.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="relative mb-4 overflow-hidden rounded-lg">
+                  <div
+                    class="absolute left-2 top-2 rounded-sm bg-primary px-2 py-1 text-white"
+                  >
+                    Top Pick
+                  </div>
+                  <img
+                    src="./assets/images/items/Image Product-1.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">
+                    <!-- Text -->
+                    Grilled salmon with lemon with dill sauce
+                  </h3>
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$30.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-3.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Mushroom Risotto</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$40.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-4.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Chicken breasts stuffed</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$25.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="group relative rounded-lg bg-white p-3 pb-12 shadow-[0_0_30px_0_#3204001A] transition hover:shadow-[0_0_16px_0_#3204001A]"
+              >
+                <!-- Image -->
+                <div class="mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src="./assets/images/items/Image Product-5.jpg"
+                    alt="item1"
+                    class="transition group-hover:scale-110"
+                  />
+                </div>
+
+                <aside>
+                  <!-- Heading -->
+                  <h3 class="mb-2">Vegetarian Stuffed Bell Peppers</h3>
+                  <!-- Text -->
+                  <p class="mb-2 text-base">
+                    Tender salmon fillets grilled to perfection, served with a
+                    creamy lemon-dill sauce, roasted potatoes, and steamed
+                    asparagus
+                  </p>
+                </aside>
+                <div
+                  class="absolute bottom-0 left-0 right-0 mx-auto flex w-full items-center justify-between px-4 pb-4"
+                >
+                  <!-- Price -->
+                  <aside class="text-lg font-medium text-primary">$20.00</aside>
+                  <!-- Cart -->
+                  <div
+                    class="flex h-9 w-9 items-center justify-center rounded-full bg-primary bg-opacity-25 text-primary"
+                  >
+                    <i class="fas fa-cart-plus"></i>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- See menu list button -->
+          <div
+            class="mb-14 mt-0 flex justify-center lg:mb-28"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <button class="primary">See Menu List</button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-cover py-10 lg:py-20"
+        style="background-image: url(./assets/images/testimonial-bg.jpg)"
+      >
+        <!-- Background image section with padding for spacing on small and large screens -->
+        <div class="container text-white">
+          <!-- Container to hold the content, with white text -->
+
+          <!-- Section Title -->
+          <h2
+            class="mb-4 text-center text-primary"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            People Love Us
+          </h2>
+          <!-- Title with primary color, centered, and animated using AOS (Animate on Scroll) library -->
+
+          <div class="flex items-center justify-center lg:gap-32">
+            <!-- Flexbox container to position the content horizontally with space between on large screens -->
+
+            <!-- Previous Arrow Button (Hidden on smaller screens) -->
+            <img
+              src="./assets/icons/arrow.svg"
+              class="hidden cursor-pointer lg:block"
+              alt="arrow"
+              id="testimonial-prev"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            />
+            <!-- Left arrow button to navigate testimonials (only shown on large screens) with fade-right animation -->
+
+            <!-- Testimonial Slider Section -->
+            <div class="owl-carousel w-full lg:w-2/3" id="testimonial-slider">
+              <!-- Owl Carousel for testimonials, takes full width on smaller screens and two-thirds width on large screens -->
+
+              <!-- Testimonial 1 -->
+              <div class="text-center">
+                <p>
+                  From the moment we stepped in, the warm ambiance and attentive
+                  service made us feel welcome. And the food? Absolutely divine!
+                  Each dish was bursting with flavor and beautifully presented.
+                  Dining at Savorium was truly a memorable experience that we
+                  can't wait to repeat.
+                </p>
+                <!-- Testimonial text with margin for spacing -->
+                <p class="mt-2 text-xl opacity-60 lg:mt-4 lg:text-2xl">
+                  - Lara Croft
+                </p>
+                <!-- Author name, slightly faded with increased font size -->
+              </div>
+
+              <!-- Repeat the same structure for additional testimonials -->
+              <div class="text-center">
+                <p>
+                  From the moment we stepped in, the warm ambiance and attentive
+                  service made us feel welcome. And the food? Absolutely divine!
+                  Each dish was bursting with flavor and beautifully presented.
+                  Dining at Savorium was truly a memorable experience that we
+                  can't wait to repeat.
+                </p>
+                <p class="mt-2 text-xl opacity-60 lg:mt-4 lg:text-2xl">
+                  - Lara Croft
+                </p>
+              </div>
+              <div class="text-center">
+                <p>
+                  From the moment we stepped in, the warm ambiance and attentive
+                  service made us feel welcome. And the food? Absolutely divine!
+                  Each dish was bursting with flavor and beautifully presented.
+                  Dining at Savorium was truly a memorable experience that we
+                  can't wait to repeat.
+                </p>
+                <p class="mt-2 text-xl opacity-60 lg:mt-4 lg:text-2xl">
+                  - Lara Croft
+                </p>
+              </div>
+              <div class="text-center">
+                <p>
+                  From the moment we stepped in, the warm ambiance and attentive
+                  service made us feel welcome. And the food? Absolutely divine!
+                  Each dish was bursting with flavor and beautifully presented.
+                  Dining at Savorium was truly a memorable experience that we
+                  can't wait to repeat.
+                </p>
+                <p class="mt-2 text-xl opacity-60 lg:mt-4 lg:text-2xl">
+                  - Lara Croft
+                </p>
+              </div>
+            </div>
+            <!-- End of Testimonial Slider -->
+
+            <!-- Next Arrow Button (Hidden on smaller screens) -->
+            <aside data-aos="fade-left" data-aos-duration="1000">
+              <img
+                src="./assets/icons/arrow.svg"
+                class="hidden rotate-180 cursor-pointer lg:block"
+                alt="arrow"
+                id="testimonial-next"
+              />
+              <!-- Right arrow button to navigate testimonials, rotated 180° to point right, shown only on large screens -->
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container grid grid-cols-1 items-center gap-4 py-14 lg:grid-cols-2 lg:gap-10 lg:py-28"
+        id="reservation"
+      >
+        <!-- Form Section -->
+        <aside>
+          <!-- Section Heading -->
+          <h2 data-aos="fade-right" data-aos-duration="1000">
+            Book A Table For You
+          </h2>
+
+          <!-- Form starts here -->
+          <form action="" class="mb-8 mt-4 lg:my-8" id="form">
+            <!-- Name Input Field -->
+            <input
+              type="text"
+              class="w-full border-b border-primary px-4 py-4 placeholder:opacity-80 focus:outline-none"
+              placeholder="Enter Your Name"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-anchor="#form"
+            />
+
+            <!-- Email Input Field -->
+            <input
+              type="email"
+              class="w-full border-b border-primary px-4 py-4 placeholder:opacity-80 focus:outline-none"
+              placeholder="Enter Your Email Address"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-anchor="#form"
+            />
+
+            <!-- Dropdown for Selecting Number of People -->
+            <div
+              class="relative z-10 inline-block w-full"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-anchor="#form"
+            >
+              <!-- Dropdown Button -->
+              <button
+                id="dropdownButton"
+                type="button"
+                class="w-full rounded-none border-b border-primary bg-transparent px-4 py-4 !text-left font-normal text-opacity-80 focus:outline-none"
+                onclick="toggleDropdown()"
+              >
+                Person
+              </button>
+
+              <!-- Dropdown Options -->
+              <div
+                id="dropdownOptions"
+                class="absolute z-[99999] hidden w-full rounded-md rounded-t-none border border-t-0 border-primary bg-white shadow-xl"
+              >
+                <!-- List of selectable options for number of people -->
+                <ul>
+                  <li
+                    class="cursor-pointer px-4 py-2 transition hover:bg-primary hover:text-white"
+                    onclick="selectOption(this)"
+                  >
+                    1
+                  </li>
+                  <li
+                    class="cursor-pointer px-4 py-2 transition hover:bg-primary hover:text-white"
+                    onclick="selectOption(this)"
+                  >
+                    2
+                  </li>
+                  <li
+                    class="cursor-pointer px-4 py-2 transition hover:bg-primary hover:text-white"
+                    onclick="selectOption(this)"
+                  >
+                    3
+                  </li>
+                  <li
+                    class="cursor-pointer px-4 py-2 transition hover:bg-primary hover:text-white"
+                    onclick="selectOption(this)"
+                  >
+                    4
+                  </li>
+                  <li
+                    class="cursor-pointer px-4 py-2 transition hover:bg-primary hover:text-white"
+                    onclick="selectOption(this)"
+                  >
+                    5
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Date Input Field -->
+            <input
+              type="date"
+              class="relative z-0 w-full border-b border-primary px-4 py-4 placeholder:font-normal placeholder:opacity-80 focus:outline-none"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-anchor="#form"
+            />
+
+            <!-- Time Input Field -->
+            <input
+              type="time"
+              class="relative z-0 w-full border-b border-primary px-4 py-4 placeholder:font-normal placeholder:opacity-80 focus:outline-none"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-anchor="#form"
+            />
+
+            <!-- Submit Button -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <button class="primary mt-8">Book Now</button>
+            </div>
+          </form>
+        </aside>
+
+        <!-- Image Section -->
+        <aside class="relative">
+          <!-- Decorative Border around Image -->
+          <div
+            class="absolute -left-2 -top-2 -z-10 h-full w-full rounded-[60px] rounded-bl-none rounded-tr-none border-2 border-primary lg:-left-6 lg:-top-6 lg:rounded-br-[120px] lg:rounded-tl-[120px]"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          ></div>
+
+          <!-- Image for Visual Appeal -->
+          <img
+            src="./assets/images/booking-bg.jpg"
+            class="relative left-2 top-2 z-30 aspect-square rounded-[60px] rounded-bl-none rounded-tr-none object-cover lg:left-0 lg:top-0 lg:rounded-br-[120px] lg:rounded-tl-[120px]"
+            alt="booking-bg"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          />
+        </aside>
+      </section>
+
+      <footer
+        class="bg-cover text-white lg:py-28"
+        style="background-image: url(./assets/images/testimonial-bg.jpg)"
+      >
+        <!-- Container for Footer Content -->
+        <div class="container bg-white bg-opacity-10 py-14 lg:p-20 lg:px-10">
+          <!-- Grid Layout for Footer Sections -->
+          <div
+            class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-4 lg:gap-2"
+          >
+            <!-- Logo and Description Section -->
+            <aside>
+              <img
+                src="./assets/images/logo.svg"
+                alt="logo"
+                class="w-4/6 lg:w-3/6"
+              />
+              <p class="mt-4 lg:w-5/6">
+                Embark on a culinary adventure and savor the authentic flavors
+                of Luxarois cuisine, all set in an ambiance of timeless elegance
+                and irresistible charm at Savorium.
+              </p>
+            </aside>
+
+            <!-- Popular Products Section -->
+            <aside class="pt-4">
+              <h5 class="font-poppins font-medium text-primary">
+                Popular Product
+              </h5>
+              <ul class="mt-4 flex flex-col gap-2">
+                <li>
+                  <a href="#" class="transition hover:text-primary"
+                    >Cicken Fried Rice</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-primary"
+                    >Thai Red Curry</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-primary"
+                    >Beef tenderloin steak</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="transition hover:text-primary"
+                    >Grilled Chicken</a
+                  >
+                </li>
+              </ul>
+            </aside>
+
+            <!-- Social Links -->
+
+            <aside class="pt-4">
+              <h5 class="font-poppins font-medium text-primary">Follow Us</h5>
+              <ul class="mt-4 flex flex-col gap-2">
+                <li class="group flex items-center gap-2">
+                  <i
+                    class="fab fa-facebook-square text-2xl transition group-hover:text-primary"
+                  ></i>
+                  <a
+                    href="https://www.facebook.com/RadditoLLC"
+                    class="transition group-hover:text-primary"
+                    >Facebook</a
+                  >
+                </li>
+
+                <li class="group flex items-center gap-2">
+                  <i
+                    class="fab fa-twitter-square text-2xl transition group-hover:text-primary"
+                  ></i>
+                  <a
+                    href="https://twitter.com/RadditoLLC"
+                    class="transition group-hover:text-primary"
+                    >Twitter</a
+                  >
+                </li>
+
+                <li class="group flex items-center gap-2">
+                  <i
+                    class="fab fa-instagram-square text-2xl transition group-hover:text-primary"
+                  ></i>
+                  <a
+                    href="https://www.instagram.com/radditollc"
+                    class="transition group-hover:text-primary"
+                    >Instagram</a
+                  >
+                </li>
+
+                <li class="group flex items-center gap-2">
+                  <i
+                    class="fab fa-linkedin text-2xl transition group-hover:text-primary"
+                  ></i>
+                  <a
+                    href="https://www.linkedin.com/company/radditollc"
+                    class="transition group-hover:text-primary"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </aside>
+
+            <!-- Additional Information Section -->
+            <aside class="pt-4">
+              <h5 class="font-poppins font-medium text-primary">Contact Us</h5>
+              <ul class="mt-4 flex flex-col gap-2">
+                <li class="group flex items-center gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    class="aspect-square w-4 fill-white transition group-hover:fill-primary"
+                  >
+                    <!-- Font Awesome Icon for Location -->
+                    <path
+                      d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+                    />
+                  </svg>
+
+                  <p class="transition group-hover:text-primary">
+                    Saint Paul, MN 55112-6629 USA
+                  </p>
+                </li>
+                <li class="group flex items-center gap-2">
+                  <i
+                    class="fas fa-envelope transition group-hover:text-primary"
+                  ></i>
+                  <a
+                    href="mailto:support@raddito.com"
+                    class="transition group-hover:text-primary"
+                    >support@raddito.com</a
+                  >
+                </li>
+                <li class="group flex items-center gap-2">
+                  <i
+                    class="fas fa-phone-square-alt transition group-hover:text-primary"
+                  ></i>
+                  <a
+                    href="callto:123456789"
+                    class="transition group-hover:text-primary"
+                    >123 456 789</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </div>
+
+          <!-- Divider Line -->
+          <div class="mt-16 h-px w-full bg-primary"></div>
+
+          <!-- Copyright Section -->
+          <div class="mt-6 text-center">
+            Copyright &copy;<span id="year"></span> Design & Developed by
+            <a
+              class="font-medium text-primary transition hover:text-white"
+              href="https://raddito.net/"
+              target="_blank"
+              >Raddito LLC</a
+            >.
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/b50fc748ca.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // Toggle the dropdown visibility
+      function toggleDropdown() {
+        const dropdown = document.getElementById("dropdownOptions");
+        dropdown.classList.toggle("hidden");
+      }
+
+      // Set the selected option as the button text
+      function selectOption(option) {
+        const button = document.getElementById("dropdownButton");
+        button.textContent = option.textContent;
+
+        // Hide the dropdown after selection
+        toggleDropdown();
+      }
+
+      // Close dropdown if clicked outside
+      window.addEventListener("click", function (e) {
+        const button = document.getElementById("dropdownButton");
+        const dropdown = document.getElementById("dropdownOptions");
+        if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.classList.add("hidden");
+        }
+      });
+    </script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
